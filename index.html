@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graha Jalayudha</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-white">
+
+  <nav class="fixed top-0 left-0 w-full bg-[#04364A] text-white shadow-md z-50">
+  <div class="container mx-auto flex justify-between items-center py-4 px-6">
+    <div class="flex items-center space-x-2">
+      <img src="img/logo.jpg" alt="Logo" class="w-10">
+    </div>
+    <ul class="flex space-x-8 font-medium">
+      <li><a href="#home" class="hover:text-gray-300"><b>Home</b></a></li>
+      <li><a href="about-us.html" class="hover:text-gray-300">About Us</a></li>
+      <li><a href="facilices.html" class="hover:text-gray-300">Facilities</a></li>
+      <li><a href="product.html" class="hover:text-gray-300">Product</a></li>
+      <li><a href="location.html" class="hover:text-gray-300">Location</a></li>
+      <li><a href="contact-us.html" class="hover:text-gray-300">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <!-- Hero Section -->
+  <section id="home" class="relative w-full h-[90vh] flex flex-col justify-center items-start text-white px-8 md:px-20"
+    style="background-image: url('img/background.jpg');
+           background-size: cover;
+           background-position: center;">
+    
+    <!--Overlay gelap agar teks lebih jelas-->
+   <div class="absolute inset-0 bg-black opacity-40"></div>
+
+    <!-- Konten di atas gambar -->
+    <div class="relative z-10 max-w-2xl">
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">
+        Hunian Modern<br>Strategis di Madura
+      </h1>
+      <p class="text-lg md:text-xl text-gray-200 mb-6">
+        Nikmati kenyamanan tinggal di kawasan premium dengan desain rumah minimalis modern, 
+        dekat dengan pusat aktivitas dan fasilitas kota.
+      </p>
+      <a href="https://wa.me/+6281528269852?text=Halo%20saya%20tertarik%20dengan%20perumahan%20Graha%20Jalayudha"
+         class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
+        Hubungi Kami 
+      </a>
+    </div>
+  </section>
+
+  <!-- 📊 Info Box Section -->
+  <section class="relative z-20 -mt-10 md:-mt-16 flex justify-center">
+    <div class="bg-[#04364A] text-white rounded-3xl shadow-lg w-11/12 md:w-9/12 grid grid-cols-2 md:grid-cols-5 text-center py-8">
+      <div>
+        <p class="text-2xl font-bold">10,5 hektar</p>
+        <p class="text-sm text-gray-300">Luas lahan</p>
+      </div>
+      <div>
+        <p class="text-2xl font-bold">477 unit</p>
+        <p class="text-sm text-gray-300">Rumah type 40</p>
+      </div>
+      <div>
+        <p class="text-2xl font-bold">46 unit</p>
+        <p class="text-sm text-gray-300">Rumah type 50</p>
+      </div>
+      <div>
+        <p class="text-2xl font-bold">15 menit</p>
+        <p class="text-sm text-gray-300">ke Surabaya</p>
+      </div>
+      <div>
+        <p class="text-2xl font-bold">10 menit</p>
+        <p class="text-sm text-gray-300">ke Kota Bangkalan</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-us" class="py-16 bg-white">
+  <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+    
+    <!-- Bagian Teks -->
+    <div class="md:w-1/2">
+      <h2 class="text-4xl font-bold mb-4">
+        Tentang <span class="text-red-600">Graha Jalayudha</span>
+      </h2>
+      <p class="text-gray-700 mb-4">
+        <strong>Graha Jalayudha</strong> hadir sebagai hunian modern yang dirancang untuk memberikan kenyamanan,
+        keamanan, dan kualitas hidup terbaik bagi setiap keluarga. Berlokasi strategis dengan akses mudah menuju Surabaya
+        dan Bangkalan.
+      </p>
+      <p class="text-gray-700 mb-4">
+        Kami percaya bahwa rumah adalah investasi jangka panjang yang harus memberikan rasa aman, nyaman, dan kebanggaan.
+        Oleh karena itu, setiap detail di Graha Jalayudha dirancang dengan kualitas terbaik, mulai dari infrastruktur,
+        tata ruang, hingga lingkungan yang ramah keluarga.
+      </p>
+      <p class="text-gray-700">
+        Bergabunglah bersama kami, wujudkan impian memiliki rumah yang bukan hanya tempat tinggal, tetapi juga tempat
+        terbaik untuk membangun masa depan.
+      </p>
+
+    <!-- Tombol Selengkapnya -->
+<button 
+  id="toggleButton" 
+  class="mt-4 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+  onclick="toggleText()">
+   <a href="about-us.html"  >Selengkapnya </a>
+</button>
+</div>
+
+    <!-- Bagian Gambar -->
+    <div class="md:w-1/2 flex justify-center">
+      <img src="img/type50.jpg" alt="Graha Jalayudha" class="rounded-2xl shadow-lg w-full md:w-[90%]">
+    </div>
+
+  </div>
+</section>
+
+<section id="facilities" class="bg-[#04394D] py-16 text-white">
+  <div class="container mx-auto px-6 text-center">
+    <!-- Judul -->
+    <h2 class="text-3xl font-bold mb-4">Fasilitas Eksklusif</h2>
+    <p class="text-gray-200 max-w-2xl mx-auto mb-12">
+      Graha Jalayudha dirancang tidak hanya sebagai hunian, tetapi juga lingkungan yang mendukung kenyamanan,
+      keamanan, dan kualitas hidup penghuninya.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <!-- Item 1 -->
+      <div class="bg-white text-gray-900 rounded-3xl p-8 shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all">
+        <div class="flex justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#04394D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.105-.895-2-2-2s-2 .895-2 2 .895 2 2 2 2-.895 2-2zm0 0v10m8-10c0-4.418-3.582-8-8-8S4 6.582 4 11v10a2 2 0 002 2h12a2 2 0 002-2V11z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold mb-2 text-center">Keamanan 24 Jam</h3>
+        <p class="text-gray-700 text-center">
+          Sistem keamanan dengan pos jaga dan CCTV untuk menjaga ketenangan dan kenyamanan setiap penghuni.
+        </p>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="bg-white text-gray-900 rounded-3xl p-8 shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all">
+        <div class="flex justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#04394D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm0 0c0 3.866-3.582 7-8 7 4.418 0 8-3.134 8-7z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold mb-2 text-center">Lokasi Strategis</h3>
+        <p class="text-gray-700 text-center">
+          Lokasi yang mudah dijangkau ke pusat kota maupun akses tol, mendukung mobilitas sehari-hari.
+        </p>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="bg-white text-gray-900 rounded-3xl p-8 shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all">
+        <div class="flex justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#04394D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12l8-8 8 8M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold mb-2 text-center">Tempat Ibadah</h3>
+        <p class="text-gray-700 text-center">
+          Fasilitas mushola yang nyaman untuk mendukung aktivitas ibadah penghuni.
+        </p>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="bg-white text-gray-900 rounded-3xl p-8 shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all">
+        <div class="flex justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#04394D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V7a2 2 0 00-2-2H6a2 2 0 00-2 2v6m16 0v6a2 2 0 01-2 2H6a2 2 0 01-2-2v-6m16 0H4" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold mb-2 text-center">Lapangan Futsal</h3>
+        <p class="text-gray-700 text-center">
+          Area olahraga futsal untuk mendukung gaya hidup sehat, kebersamaan, dan aktivitas komunitas penghuni.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Bagian Product-->
+
+ <section id="product" class="py-16 bg-white">
+  <div class="text-center mb-10">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+      Temukan Rumah Impianmu di 
+      <span class="text-red-600">Graha Jalayudha</span>
+    </h2>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 px-6 md:px-20 justify-items-center">
+    <!-- Rumah Type 40 -->
+    <div class="relative group w-full max-w-md">
+      <img src="img/type40.jpg" alt="Rumah Type 40"
+           class="rounded-2xl shadow-xl w-full h-auto object-cover 
+                  group-hover:scale-105 transition-transform duration-500 ease-in-out">
+      <div class="absolute bottom-[-25px] left-1/2 transform -translate-x-1/2 
+                  bg-[#04394D] text-white px-8 py-3 rounded-md shadow-lg 
+                  group-hover:-translate-y-1 transition-all duration-300 ease-in-out">
+        <a href="Hidden Element/rumah-type-40.html" class="text-lg font-semibold">Rumah Type 40</a>
+      </div>
+    </div>
+
+    <!-- Rumah Type 50 -->
+    <div class="relative group w-full max-w-md">
+      <img src="img/type50.jpg" alt="Rumah Type 50"
+           class="rounded-2xl shadow-xl w-full h-auto object-cover 
+                  group-hover:scale-105 transition-transform duration-500 ease-in-out">
+      <div class="absolute bottom-[-25px] left-1/2 transform -translate-x-1/2 
+                  bg-[#04394D] text-white px-8 py-3 rounded-md shadow-lg 
+                  group-hover:-translate-y-1 transition-all duration-300 ease-in-out">
+        <a href="Hidden Element/rumah-type-50.html" class="text-lg font-semibold">Rumah Type 50</a>
+      </div>
+    </div>
+
+    <!-- Rumah Type 72-->
+    <div class="relative group md:col-span-2 flex justify-center w-full max-w-md mt-6">
+      <img src="img/rukotype72.jpg" alt="Rumah Type 72"
+           class="rounded-2xl shadow-xl w-full h-auto object-cover 
+                  group-hover:scale-105 transition-transform duration-500 ease-in-out">
+      <div class="absolute bottom-[-25px] left-1/2 transform -translate-x-1/2 
+                  bg-[#04394D] text-white px-8 py-3 rounded-md shadow-lg 
+                  group-hover:-translate-y-1 transition-all duration-300 ease-in-out">
+        <a href="Hidden Element/ruko-type-72.html" class="text-lg font-semibold">Ruko Type 72</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FormCustomer -->
+  <section class="bg-[#063b55] text-white py-10 px-6 md:px-16 rounded-lg max-w-6xl mx-auto my-10">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      
+      <!-- Text Kiri -->
+      <div>
+        <h2 class="text-xl md:text-2xl font-bold mb-3">
+          Dapatkan Penawaran Eksklusif dari Kami
+        </h2>
+        <p class="text-sm md:text-base text-gray-200 leading-relaxed">
+          Jadikan hunian impian Anda di Graha Jalayudha lebih mudah terwujud dengan berbagai promo menarik dan penawaran khusus yang kami sediakan.
+        </p>
+      </div>
+
+  <!-- Input Kanan -->
+    <form class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <input type="text" placeholder="Nama Lengkap" class="p-2 rounded-full text-gray-700 focus:ring-2 focus:ring-red-500 outline-none" />
+      <input type="email" placeholder="Email" class="p-2 rounded-full text-gray-700 focus:ring-2 focus:ring-red-500 outline-none" />
+      <input type="number" placeholder="No Whatsapp (+62)" class="p-2 rounded-full text-gray-700 focus:ring-2 focus:ring-red-500 outline-none" />
+      <input type="text" placeholder="Domisili" class="p-2 rounded-full text-gray-700 focus:ring-2 focus:ring-red-500 outline-none" />
+      <a href="https://wa.me/6281528269852?text=Halo,%20saya%20tertarik%20dengan%20perumahan%20Graha%20Jalayudha"><button type="submit" class="sm:col-span-2 bg-red-700 hover:bg-red-800 text-white font-medium py-2 px-6 rounded-full transition duration-200">
+        Dapatkan Penawaran
+      </button></a>
+    </form>
+    </div>
+  </section>
+
+  <!-- ====== BAGIAN PROMO ====== -->
+   <div class="text-center mb-10">
+  <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+    Berita
+    <span class="text-red-600">Graha Jalayudha</span>
+  </h2>
+  <br>
+   <p class="text-black-700 max-w-2x1 mx-auto leading-relaxed">
+   Temukan kabar terbaru seputar progres pembangunan, promo menarik, <BR>
+   <span>dan kegiatan komunitas di kawasan Graha Jalayudha</span>
+ </p>
+</div>
+
+</section>
+  <section class="py-16 px-6 md:px-20 bg-white">
+    <div class="grid md:grid-cols-2 gap-10 place-items-center">
+      <!-- PROMO 1 -->
+      <div class="flex flex-col items-center text-center">
+        <img src="img/type40.jpg" alt="Rumah Type 40"
+          class="rounded-2xl shadow-lg mb-6 object-cover w-full max-w-md" />
+        <h2 class="text-xl font-semibold mb-3">
+          Progres Pengurukan Tahap Pertama Telah Mencapai 65%
+        </h2>
+        <p class="text-gray-600 mb-6 px-3">
+          Pengembangan Graha Jalayudha terus menunjukkan kemajuan yang signifikan.
+          Hingga bulan ini, proses pengurukan rumah tahap pertama telah mencapai 65%.
+        </p>
+        <a href="Hidden Element/berita1.html"
+          class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-5 rounded-full transition">
+          Baca Selengkapnya
+        </a>
+      </div>
+
+      <!-- PROMO 2 -->
+      <div class="flex flex-col items-center text-center">
+        <img src="img/type50.jpg" alt="Rumah Type 50"
+          class="rounded-2xl shadow-lg mb-6 object-cover w-full max-w-md" />
+        <h2 class="text-xl font-semibold mb-3">
+          Promo Spesial Akhir Tahun – DP Ringan & Bonus Furniture
+        </h2>
+        <p class="text-gray-600 mb-6 px-3">
+          Dapatkan kesempatan memiliki rumah impian dengan DP ringan dan bonus
+          furniture menarik untuk setiap pembelian unit di Graha Jalayudha selama
+          periode promo berlangsung.
+        </p>
+        <a href="Hidden Element/berita2.html"
+          class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-5 rounded-full transition">
+          Baca Selengkapnya
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="bg-[#073B4C] text-white pt-16 pb-6">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10 text-center md:text-left">
+
+      <!-- KANTOR -->
+      <div>
+        <h3 class="font-semibold text-lg mb-3">Kantor Marketing</h3>
+        <p class="text-sm leading-relaxed">
+          Jalan Raya Suramadu, Desa Petapan,<br />
+          Kecamatan Labang, Kabupaten Bangkalan
+        </p>
+      </div>
+
+      <!-- CONTACT -->
+      <div>
+        <h3 class="font-semibold text-lg mb-3">Contact Us</h3>
+        <p class="text-sm mb-2"><a href="https://wa.me/6281528269582?text=Halo,%20saya%20tertarik%20dengan%20perumahan%20Graha%20Jalayudha" target="_blank">📞 +62 815 2826 9852 (Maridi)</a></p>
+        <p class="text-sm mb-2"><a href="https://wa.me/6282336607816?text=Halo,%20saya%20tertarik%20dengan%20perumahan%20Graha%20Jalayudha" target="_blank">📞 +62 823 3660 7816 (Imron)</a></p>
+        <p class="text-sm mb-2"><a href="https://www.instagram.com/grahajalayudha?igsh=MXJzc214YWlxeW1nZg==" target="_blank"> 📸 @grahajalayudha</a></p>
+        <p class="text-sm"><a href="https://www.tiktok.com/@graha.jalayudha?_t=ZS-90OjzhrZm30&_r=1" target="_blank"> 🎵 @graha.jalayudha</a></p>
+      </div>
+
+      <!-- MENU -->
+      <div>
+        <h3 class="font-semibold text-lg mb-3">Menu</h3>
+        <ul class="space-y-1">
+          <li><a href="#home" class="hover:underline">Home</a></li>
+          <li><a href="about-us.html" class="hover:underline">About Us</a></li>
+          <li><a href="facilices.html" class="hover:underline">Facilities</a></li>
+          <li><a href="product.html" class="hover:underline">Product</a></li>
+          <li><a href="location.html" class="hover:underline">Location</a></li>
+        </ul>
+      </div>
+
+      <!-- SIMULASI KPR -->
+      <div>
+        <h3 class="font-semibold text-lg mb-3">Simulasi KPR</h3>
+        <div class="space-y-4 flex flex-col items-center md:items-start">
+          <img src="img/bca.png"
+            alt="BCA" class="w-24 bg-white p-2 rounded" />
+          <img src="img/mandiri.png"
+            alt="Mandiri" class="w-24 bg-white p-2 rounded" />
+        </div>
+      </div>
+    </div>
+  </footer>
+      <div class="bg-white text-center text-sm border-t pt-4">
+  <p class="text-black ">Graha Jalayudha 2025. All rights reserved.</p>
+</div>
+<br>
+
+<!--Efek Turun/Naik Secara Perlahan-->
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const target = document.querySelector(this.getAttribute("href"));
+      if (!target) return;
+
+      const start = window.pageYOffset;
+      const end = target.offsetTop;
+      const duration = 500; // 
+      let startTime = null;
+
+      function scrollAnimation(currentTime) {
+        if (!startTime) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        const ease = progress < 0.5 
+          ? 4 * progress * progress * progress 
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2; 
+
+        window.scrollTo(0, start + (end - start) * ease);
+
+        if (timeElapsed < duration) requestAnimationFrame(scrollAnimation);
+      }
+
+      requestAnimationFrame(scrollAnimation);
+    });
+  });
+</script>
+
+</body>
+</html>
