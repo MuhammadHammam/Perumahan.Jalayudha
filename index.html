@@ -6,50 +6,42 @@
   <title>Graha Jalayudha</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-  <script>
-  // Fade out saat berpindah halaman
-  document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-
-      // Hanya jalankan efek jika bukan tautan ke luar (misalnya WhatsApp)
-      if (href && !href.startsWith('http') && !href.startsWith('https') && !href.startsWith('mailto') && !href.startsWith('wa')) {
-        e.preventDefault();
-        document.body.classList.add('fade-out');
-        setTimeout(() => {
-          window.location.href = href;
-        }, 800); // waktu 0,8 detik
-      }
-    });
-  });
-</script>
-
-<style>
-  /* Efek transisi halus seluruh halaman */
-  body {
-    opacity: 1;
-    transition: opacity 0.8s ease;
-  }
-  body.fade-out {
-    opacity: 0;
-  }
-</style>
-
 <body class="font-sans bg-white">
-
-  <nav class="fixed top-0 left-0 w-full bg-[#04364A] text-white shadow-md z-50">
-  <div class="container mx-auto flex justify-between items-center py-4 px-6">
-    <div class="flex items-center space-x-2">
-      <img src="img/logo.jpg" alt="Logo" class="w-10">
+<!--  Ini Bagian Navbar Bro -->
+<nav class="fixed top-0 left-0 w-full bg-[#04364A] text-white shadow-md z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img src="img/logo.jpg" alt="Logo" class="h-12 w-auto mr-2">
     </div>
-    <ul class="flex space-x-8 font-medium">
-      <li><a href="#home" class="hover:text-gray-300"><b>Home</b></a></li>
-      <li><a href="about-us.html" class="hover:text-gray-300">About Us</a></li>
-      <li><a href="facilices.html" class="hover:text-gray-300">Facilities</a></li>
-      <li><a href="product.html" class="hover:text-gray-300">Product</a></li>
-      <li><a href="location.html" class="hover:text-gray-300">Location</a></li>
-      <li><a href="contact-us.html" class="hover:text-gray-300">Contact Us</a></li>
-    </ul>
+
+    <!-- Tombol hamburger (muncul di HP) -->
+    <button id="menu-btn" class="md:hidden flex flex-col space-y-1 focus:outline-none">
+      <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+      <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+      <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+    </button>
+
+    <!-- Menu utama (desktop) -->
+    <div class="hidden md:flex space-x-8 font-medium">
+      <a href="#home" class="hover:text-gray-300 font"><b>Home</b></a>
+      <a href="about-us.html" class="hover:text-gray-300">About Us</a>
+      <a href="facilices.html" class="hover:text-gray-300">Facilities</a>
+      <a href="product.html" class="hover:text-gray-300">Product</a>
+      <a href="location.html" class="hover:text-gray-300">Location</a>
+      <a href="contact-us.html" class="hover:text-gray-300">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Menu Mobile Animasi -->
+  <div id="mobile-menu"
+       class="max-h-0 overflow-hidden md:hidden bg-[#04364A] text-white px-6 text-center transition-all duration-500 ease-in-out">
+    <a href="#home" class="block py-3 border-b border-gray-600 hover:text-gray-300"><b>Home</b></a>
+    <a href="about-us.html" class="block py-3 border-b border-gray-600 hover:text-gray-300">About Us</a>
+    <a href="facilices.html" class="block py-3 border-b border-gray-600 hover:text-gray-300">Facilities</a>
+    <a href="product.html" class="block py-3 border-b border-gray-600 hover:text-gray-300">Product</a>
+    <a href="location.html" class="block py-3 border-b border-gray-600 hover:text-gray-300">Location</a>
+    <a href="contact-us.html" class="block py-3 hover:text-gray-300">Contact Us</a>
   </div>
 </nav>
 
@@ -391,7 +383,7 @@
 </div>
 <br>
 
-<!--Efek Turun/Naik Secara Perlahan-->
+<!--Efek Turun/Naik Secara Perlahan (Ga terlalu penting)-->
 
 <script>
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -423,7 +415,38 @@
     });
   });
 </script>
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let menuOpen = false;
+
+  menuBtn.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+
+    if (menuOpen) {
+      // buka menu (animasi slide-down)
+      mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+    } else {
+      // tutup menu (slide-up)
+      mobileMenu.style.maxHeight = '0';
+    }
+
+    // animasi hamburger berubah jadi "X"
+    menuBtn.classList.toggle('open');
+    const spans = menuBtn.querySelectorAll('span');
+    if (menuBtn.classList.contains('open')) {
+      spans[0].style.transform = 'rotate(45deg) translateY(8px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'rotate(-45deg) translateY(-8px)';
+    } else {
+      spans.forEach(s => {
+        s.style.transform = '';
+        s.style.opacity = '1';
+      });
+    }
+  });
+</script>
+
 
 </body>
-
 </html>
