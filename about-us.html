@@ -168,8 +168,41 @@
   <p class="text-black ">Graha Jalayudha 2025. All rights reserved.</p>
   <br>
 </div>
+    <script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let menuOpen = false;
+
+  menuBtn.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+
+    if (menuOpen) {
+      // buka menu (animasi slide-down)
+      mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+    } else {
+      // tutup menu (slide-up)
+      mobileMenu.style.maxHeight = '0';
+    }
+
+    // animasi hamburger berubah jadi "X"
+    menuBtn.classList.toggle('open');
+    const spans = menuBtn.querySelectorAll('span');
+    if (menuBtn.classList.contains('open')) {
+      spans[0].style.transform = 'rotate(45deg) translateY(8px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'rotate(-45deg) translateY(-8px)';
+    } else {
+      spans.forEach(s => {
+        s.style.transform = '';
+        s.style.opacity = '1';
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
+
 
 
 
