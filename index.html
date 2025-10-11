@@ -6,6 +6,35 @@
   <title>Graha Jalayudha</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+  <script>
+  // Fade out saat berpindah halaman
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+
+      // Hanya jalankan efek jika bukan tautan ke luar (misalnya WhatsApp)
+      if (href && !href.startsWith('http') && !href.startsWith('https') && !href.startsWith('mailto') && !href.startsWith('wa')) {
+        e.preventDefault();
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+          window.location.href = href;
+        }, 800); // waktu 0,8 detik
+      }
+    });
+  });
+</script>
+
+<style>
+  /* Efek transisi halus seluruh halaman */
+  body {
+    opacity: 1;
+    transition: opacity 0.8s ease;
+  }
+  body.fade-out {
+    opacity: 0;
+  }
+</style>
+
 <body class="font-sans bg-white">
 
   <nav class="fixed top-0 left-0 w-full bg-[#04364A] text-white shadow-md z-50">
@@ -396,4 +425,5 @@
 </script>
 
 </body>
+
 </html>
