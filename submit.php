@@ -45,7 +45,7 @@ if ($stmt->execute()) {
     $pesan = "Halo, saya $nama. Saya tertarik dengan penawaran perumahan Graha Jalayudha.";
     
     // Arahkan ke WhatsApp setelah data tersimpan
-    header("Location: https://wa.me/$6281528269852?text=" . urlencode($pesan));
+    header("Location: https://wa.me/$nomorWA?text=" . urlencode($pesan));
     exit();
 } else {
     echo "Terjadi kesalahan: " . $stmt->error;
@@ -55,3 +55,4 @@ if ($stmt->execute()) {
 $stmt->close();
 $conn->close();
 ?>
+
