@@ -85,23 +85,31 @@
     <!-- Gambar Peta -->
 <section class="bg-white py-8">
   <h2 class="text-center text-xl font-bold mb-4">Lokasi Kami</h2>
-  
+
   <div class="flex justify-center">
-    <div class="w-full max-w-xl h-56 md:h-72 rounded-lg overflow-hidden shadow-lg">
+    <a 
+      href="https://goo.gl/maps/Z9zCakUXCUGpPiAD8?g_st=aw" 
+      target="_blank" 
+      class="block w-full max-w-xl h-56 md:h-72 rounded-lg overflow-hidden shadow-lg relative group"
+      title="Lihat di Google Maps"
+    >
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.585127206003!2d106.655!3d-6.137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fc0ffed5b1b7%3A0x5ce34b7c2b7c37c9!2sAsthara%20Skyfront%20City%20Bandara!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
-        width="100%" 
-        height="100%" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1"
+        class="w-full h-full pointer-events-none group-hover:opacity-90 transition-opacity"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
-    </div>
+      <div class="absolute inset-0"></div>
+    </a>
   </div>
 
   <div class="text-center mt-4">
-    <a href="https://goo.gl/maps/Z9zCakUXCUGpPiAD8?g_st=aw" target="_blank" class="text-blue-600 underline hover:text-blue-800">
+    <a 
+      href="https://goo.gl/maps/Z9zCakUXCUGpPiAD8?g_st=aw" 
+      target="_blank" 
+      class="text-blue-600 underline hover:text-blue-800">
       Buka di Google Maps
     </a>
   </div>
@@ -222,6 +230,7 @@
 
 </body>
 </html>
+
 
 
 
