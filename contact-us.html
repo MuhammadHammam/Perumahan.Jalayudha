@@ -70,28 +70,26 @@
   <section class="bg-[#063b55] text-white py-10 px-6 md:px-16 rounded-lg max-w-6xl mx-auto my-10">
     <div class="grid md:grid-cols-2 gap-8 items-center">
       
- <!-- Text Kiri -->
-    <div>
-       <h2 class="text-xl md:text-2xl font-bold mb-3">
-         Dapatkan Penawaran Eksklusif dari Kami
-       </h2>
-       <p class="text-sm md:text-base text-gray-200 leading-relaxed">
-         Jadikan hunian impian Anda di Graha Jalayudha lebih mudah terwujud dengan berbagai promo menarik dan penawaran khusus yang kami sediakan.
-       </p>
+      <!-- Text Kiri -->
+      <div>
+        <h2 class="text-xl md:text-2xl font-bold mb-3">
+          Dapatkan Penawaran Eksklusif dari Kami
+        </h2>
+        <p class="text-sm md:text-base text-gray-200 leading-relaxed">
+          Jadikan hunian impian Anda di Graha Jalayudha lebih mudah terwujud dengan berbagai promo menarik dan penawaran khusus yang kami sediakan.
+        </p>
+      </div>
+
+  <!-- Input Kanan -->
+    <form id="penawaran" action="submit.php" method="POST" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <input type="text" name="nama" id="nama" placeholder="Nama Lengkap" class="p-2 rounded-full text-gray-700 focus:ring-2 focus:ring-red-500 outline-none" />
+      <input type="number" name="whatsapp" id="whatsapp" placeholder="No Whatsapp (+62)" class="p-2 rounded-full text-gray-700 focus:ring-2 focus:ring-red-500 outline-none" />
+            <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-full mt-2 col-span-2">
+        Dapatkan Penawaran
+            </button>
+    </form>
     </div>
-
-<!-- Input Bagian Kanan-->
-
-<form class="grid grid-cols-1 sm:grid-cols-2 gap-3">
- <input type="text" placeholder="Nama Lengkap" class="p-2 rounded-full text-gray-700 focus:ring-2 focus:ring-red-500 outline-none" />
- <input type="email" placeholder="Email" class="p-2 rounded-full text-gray-700 focus:ring-2 focus:ring-red-500 outline-none" />
- <input type="number" placeholder="No Whatsapp (+62)" class="p-2 rounded-full text-gray-700 focus:ring-2 focus:ring-red-500 outline-none" />
- <input type="text" placeholder="Domisili" class="p-2 rounded-full text-gray-700 focus:ring-2 focus:ring-red-500 outline-none" />
- <button type="submit" class="sm:col-span-2 bg-red-700 hover:bg-red-800 text-white font-medium py-2 px-6 rounded-full transition duration-200">
-    Dapatkan Penawaran
-</button>
-</form>
-</section>
+  </section>
 
   <!-- ===== FOOTER ===== -->
 <footer class="bg-[#073B4C] text-white pt-16 pb-6">
@@ -196,6 +194,7 @@
 
 </body>
 </html>
+
 
 
 
