@@ -280,28 +280,6 @@
     </div>
   </section>
 
-  <!-- Script untuk buka WhatsApp otomatis -->
-<script>
-document.getElementById('penawaranForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  // ambil data dari form
-  let formData = new FormData(this);
-  let nama = formData.get('nama');
-  let whatsapp = formData.get('whatsapp');
-
-  // kirim ke PHP untuk disimpan di database
-  fetch('submit.php', {
-    method: 'POST',
-    body: formData
-  }).then(() => {
-    // buka WhatsApp otomatis setelah sukses
-    let pesan = `Halo Graha Jalayudha,%0ASaya ingin mendapatkan penawaran.%0A%0A*Nama:* ${nama}%0A*No WhatsApp:* ${whatsapp}%0A`;
-        window.open(`https://wa.me/6281528269852?text=${pesan}`, '_blank');
-  });
-});
-</script>
-
   <!-- ====== BAGIAN PROMO ====== -->
    <div class="text-center mb-10">
   <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
@@ -505,6 +483,7 @@ document.getElementById('penawaranForm').addEventListener('submit', function(e) 
 
 </body>
 </html>
+
 
 
 
